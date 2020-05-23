@@ -26,7 +26,7 @@ class TasksController < ApplicationController
       redirect_to root_url
     else
       flash.now[:denger] = 'Taskが登録されませんでした。'
-      render 'tasks/index'
+      render 'new'
     end
   end
   
