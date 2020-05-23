@@ -12,27 +12,5 @@
     </div>
   </div>
 <% end %>
-    <% if @taskall.any? %>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>タスク名</th>
-                <th>進捗状況</th>
-            </tr>
-        </thead>
-        <tbody>
-           <% @taskall.each do |task| %>
-           <tr>
-               <td><%= link_to task.id, task %></td>
-               <td><%= task.content %></td>
-               <td><%= task.status %></td>
-           </tr>
-        <% end %>
-        </tbody>
-    </table>
-    <div>
-    <%= paginate @taskall %>
-    </div>
-<% end %>
+
 

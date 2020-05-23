@@ -3,7 +3,6 @@ class TasksController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   
   def index
-    @taskall = Task.all.page(params[:page]).per(10)
     if logged_in?
       @task = current_user.tasks.build
       @tasks = current_user.tasks.order(id: :desc).page(params[:page]).per(10)
