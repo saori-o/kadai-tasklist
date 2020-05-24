@@ -5,8 +5,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.includes(:user).find(params[:id])
-    @tasks = @user.tasks.order(id: :desc).page(params[:page])
   end
 
   def new
